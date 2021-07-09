@@ -1,0 +1,8 @@
+<h1>MagicLink#new</h1>
+
+<%= form_with url: "/magic_link/submit", method: :post do |form| %>
+  <%= form.label :email, "Email:" %>
+  <%= form.text_field :email %>
+  <%= form.submit "Submit" %>
+<% end %>
+

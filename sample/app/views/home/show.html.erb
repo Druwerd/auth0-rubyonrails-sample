@@ -3,3 +3,12 @@
   <h1>RoR Auth0 Sample</h1>
   <%= button_to 'Login', 'auth/auth0', method: :post, class: 'btn btn-success btn-lg', id: 'qsLoginBtn' unless session[:userinfo].present? %>
 </section>
+
+<section class="jumbotron text-center">
+<h2>Send me a magic link</h2>
+<%= form_with url: "/magic_link/submit", method: :post do |form| %>
+  <%= form.label :email, "Email:" %>
+  <%= form.text_field :email %>
+  <%= form.submit "Submit" %>
+<% end %>
+</section>

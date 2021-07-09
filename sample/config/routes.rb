@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get '/auth/logout' => 'auth0#logout'
   get '/auth/redirect' => 'auth0#redirect'
 
+  get 'magic_link/new'
+  post 'magic_link/submit'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
